@@ -3,7 +3,7 @@ from update_indicators import historical_update
 from update_indicators import daily_update
 from datetime import date
 import datetime
-file_name = "C:/Users/xrism/Downloads/financeproject.csv"
+file_name = "financeproject.csv"
 
 
 def main():
