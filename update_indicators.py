@@ -30,7 +30,7 @@ def historical_update(f):
             real = ADX(stock_high.to_numpy(), stock_low.to_numpy(), stock_close.to_numpy(), timeperiod=14)
             current_date = stock.loc[i]['DATE']
             current_symbol = symbol
-            update = f"UPDATE DATA SET Computed_value ='{stock_50.mean()}' , D100='{stock_100.mean()}' , D200='{stock_200.mean()}' , ADX='{real[-1]}' WHERE SYMBOL='{current_symbol}' and DATE='{current_date}';"
+            update = f"UPDATE DATA SET Computed_value ='{stock_50.mean()}' , D100='{stock_100.mean()}' , D200='{stock_200.mean()}' and ADX='{real[-1]}' WHERE SYMBOL='{current_symbol}' and DATE='{current_date}';"
             print(update)
 
             cursor = con.execute(update)
